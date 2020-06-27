@@ -1,0 +1,27 @@
+version: ci
+cluster: yuval
+tag: 4.5
+numcpus: 8
+baremetal: false
+network: default
+type: openshift
+master_memory: 12288
+worker_memory: 8192
+bootstrap_memory: 8192
+bootstrap_numcpus: 8
+disk_size: 50
+domain: karmalabs.com
+masters: 3
+workers: 1
+numa:
+- id: 0
+  vcpus: 0-3
+  memory: 4096
+- id: 1
+  vcpus: 4-7
+  memory: 4096
+extra_networks:
+- name: default
+- name: default
+api_ip: 192.168.122.253
+pull_secret: pull-secret.txt

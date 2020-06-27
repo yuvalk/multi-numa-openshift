@@ -1,0 +1,32 @@
+    <controller type='pci' index='1' model='pci-expander-bus'>
+      <model name='pxb'/>
+      <target busNr='254'>
+        <node>0</node>
+      </target>
+      <alias name='pci.1'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x04' function='0x0'/>
+    </controller>
+    <controller type='pci' index='2' model='pci-expander-bus'>
+      <model name='pxb'/>
+      <target busNr='252'>
+        <node>1</node>
+      </target>
+      <alias name='pci.2'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x05' function='0x0'/>
+    </controller>
+    <interface type='network'>
+      <mac address='52:54:00:69:09:25'/>
+      <source network='default' portid='0fce6f0f-bac7-4fb0-b065-dc96db64d237' bridge='virbr0'/>
+      <target dev='vnet4'/>
+      <model type='virtio'/>
+      <alias name='net1'/>
+      <address type='pci' domain='0x0000' bus='0x01' slot='0x04' function='0x0'/>
+    </interface>
+    <interface type='network'>
+      <mac address='52:54:00:69:09:26'/>
+      <source network='default' portid='14d61c69-72b9-420a-b36e-027e521a9b70' bridge='virbr0'/>
+      <target dev='vnet5'/>
+      <model type='virtio'/>
+      <alias name='net2'/>
+      <address type='pci' domain='0x0000' bus='0x02' slot='0x04' function='0x0'/>
+    </interface>
